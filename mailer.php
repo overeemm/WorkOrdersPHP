@@ -1,6 +1,9 @@
 <?php
   error_reporting(E_ALL);
 
+  // defines
+  // $from = array('test@example.nl' => "Example");
+  require_once 'config.php';
   require_once 'swiftmailer/swift_required.php';
   require_once 'signature-to-image.php';
 
@@ -37,8 +40,7 @@
       $message = Swift_Message::newInstance();
       $message = $message
         ->setSubject('Werkbon')
-        ->setFrom(array('info@overeemtelecom.nl' => "Overeem Telecom B.V."))
-        //->setTo(array('overeemm@gmail.com' => "Michiel Overeem"))
+        ->setFrom($from)
         ->setTo(array($_POST["Email"] => $_POST["Contactpersoon"]))
         ->setBody(
 '<html>'.
@@ -77,9 +79,9 @@ $materialen .
       
       unlink($signaturefilename);
 
-      header('Location: http://wb.overeemtelecom.nl/');
+      header('Location: /');
     } else {
-      header('Location: http://wb.overeemtelecom.nl/#fout');
+      header('Location: /#fout');
     }
 
   } catch (Exception $e) {

@@ -3,6 +3,7 @@
 
   // defines
   // $from = array('test@example.nl' => "Example");
+  // $cc = array('test@example.nl' => "Example");
   require_once 'config.php';
   require_once 'swiftmailer/swift_required.php';
   require_once 'signature-to-image.php';
@@ -13,7 +14,7 @@
     if(isset($_POST["Email"])) {
 
       $json = $_POST['output'];
-      $img = sigJsonToImage($json, array('imageSize' => array(905, 400),'drawMultiplier'=> 4));
+      $img = sigJsonToImage($json, array('imageSize' => array(730, 400),'drawMultiplier'=> 4));
 
       $signaturefilename = uniqid() . ".png";
       imagepng($img, $signaturefilename);
@@ -42,6 +43,7 @@
         ->setSubject('Werkbon')
         ->setFrom($from)
         ->setTo(array($_POST["Email"] => $_POST["Contactpersoon"]))
+        ->setCc($cc)
         ->setBody(
 '<html>'.
 '<head></head>'.

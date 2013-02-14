@@ -32,42 +32,37 @@
           <input type="email" name="Email" placeholder="E-mail adres" />
         </div>
 
-        <div class="six columns step1">
-          <input type="date" name="Datum[]" placeholder="Datum" />
-          <input type="time" name="Begintijd[]" placeholder="08:00" />
-          <input type="time" class="end" name="Eindtijd[]" placeholder="17:00" />
+        <div class="six columns step1 momenten">
+          <input class="momenten" type="date" name="Datum[]" placeholder="Datum" />
+          <input class="momenten start" type="time" name="Begintijd[]" placeholder="08:00" />
+          <input class="momenten eind" type="time" class="end" name="Eindtijd[]" placeholder="17:00" />
           
           <div class="clear"> </div>
 
-          <input type="date" name="Datum[]" placeholder="Datum" />
-          <input type="time" name="Begintijd[]" placeholder="08:00" />
-          <input type="time" class="end" name="Eindtijd[]" placeholder="17:00" />
-
+          <input class="momenten" type="date" name="Datum[]" placeholder="Datum" />
+          <input class="momenten start" type="time" name="Begintijd[]" placeholder="08:00" />
+          <input class="momenten eind" type="time" class="end" name="Eindtijd[]" placeholder="17:00" />
+          
           <div class="clear"> </div>
-
-          <input type="date" name="Datum[]" placeholder="Datum" />
-          <input type="time" name="Begintijd[]" placeholder="08:00" />
-          <input type="time" class="end" name="Eindtijd[]" placeholder="17:00" />
         </div>
 
-        <div class="six columns step1">
-          <input type="number" name="Aantal[]" placeholder="Nr" />
-          <input type="text" name="Omschrijving[]" placeholder="Omschrijving" />
+        <div class="six columns step1 onderdelen">
+          <input class="onderdelen" type="number" name="Aantal[]" placeholder="Nr" />
+          <input class="onderdelen" type="text" name="Omschrijving[]" placeholder="Omschrijving" />
 
           <div class="clear"> </div>
 
-          <input type="number" name="Aantal[]" placeholder="Nr" />
-          <input type="text" name="Omschrijving[]" placeholder="Omschrijving" />
+          <input class="onderdelen" type="number" name="Aantal[]" placeholder="Nr" />
+          <input class="onderdelen" type="text" name="Omschrijving[]" placeholder="Omschrijving" />
 
           <div class="clear"> </div>
-
-          <input type="number" name="Aantal[]" placeholder="Nr" />
-          <input type="text" name="Omschrijving[]" placeholder="Omschrijving" />
         </div>
+
+        <div class="clear"> </div>
 
         <button class="button secondary step1" id="akkoord">Akkoord</button>
 
-        <div class="sig">
+        <div class="sig" id="sig">
 
           <ul class="sigNav">
             <li class="clearButton"><a href="#clear">Opnieuw</a></li>
@@ -75,7 +70,7 @@
 
           <div class="sig sigWrapper">
             <div class="typed"></div>
-            <canvas class="pad" width="905" height="400"></canvas>
+            <canvas class="pad" width="730" height="400"></canvas>
             <input type="hidden" name="output" class="output">
           </div>
 
@@ -92,16 +87,59 @@
   <script>
     $(document).ready(function() {
       
-      $('.werkbon').signaturePad({ defaultAction: "drawIt", drawOnly: true });
+      var now = new Date();
+      var minutes = now.getMinutes();
+      var hours = now.getHours();
+      var days = now.getDate();
+      var months = now.getMonth() + 1;
+      while((minutes % 15) != 0) {
+        minutes++;
+      }
+      if(minutes == 60){
+        minutes = 0;
+        hours++;
+      }
+      if(minutes < 10){ minutes = "00"; }
+      if(days < 10){ days = "0" + days; }
+      if(months < 10){ months = "0" + months; }
+      var currentDate = now.getFullYear() + "-" + months + "-" + days;
+      var currentTime = hours + ":" + minutes;
+
+      $('.werkbon').signaturePad({ defaultAction: "drawIt", drawOnly: true, lineWidth: 0 });
       $('.sig').hide();
 
       $("#akkoord").click(function (event) {
         event.stopPropagation();
         event.preventDefault();
-        $(".step1").hide();
+        
         $('.sig').show();
-      })
+        $('.sig').get(0).scrollIntoView();
+      });
 
+      $("input.momenten[type='date']").first().val(currentDate);
+      $("input.momenten.eind").first().val(currentTime);
+
+      $("div.onderdelen").on("keyup", "input.onderdelen", function (event) {
+        if($("input.onderdelen[type='number']").last().val() != ""
+          || $("input.onderdelen[type='text']").last().val() != "")
+        {
+          $("<input class='onderdelen' type='number' name='Aantal[]' placeholder='Nr' />" +
+            "<input class='onderdelen' type='text' name='Omschrijving[]' placeholder='Omschrijving' />" +
+            "<div class='clear'> </div>").appendTo($("div.onderdelen"));
+        }
+      });
+
+      $("div.momenten").on("keyup", "input.momenten", function (event) {
+        if($("input.momenten[type='date']").last().val() != ""
+          || $("input.momenten.start").last().val() != ""
+          || $("input.momenten.eind").last().val() != "")
+        {
+          $("<input class='momenten' type='date' name='Datum[]' placeholder='Datum' />" +
+            "<input class='momenten start' type='time' name='Begintijd[]' placeholder='08:00' />" +
+            "<input class='momenten eind' type='time' class='end' name='Eindtijd[]' placeholder='17:00' />" +
+            "<div class='clear'> </div>").appendTo($("div.momenten"));
+        }
+      });
     });
   </script> 
   

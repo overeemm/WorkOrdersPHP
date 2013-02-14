@@ -1,6 +1,7 @@
 body { 
   background: #f8f8f8 url("../images/logo.jpg") 10px 0px no-repeat;
   background-size: 50px auto;
+  width: 768px;
 }
 
 .row { padding-top: 20px; position: relative; }

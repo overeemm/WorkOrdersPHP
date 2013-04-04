@@ -1,0 +1,869 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"update",
+				"updateQualityWithOne"
+			],
+			[
+				"ex",
+				"extend"
+			],
+			[
+				"list-",
+				"list-style-type"
+			],
+			[
+				"logo",
+				"logoColor"
+			],
+			[
+				"bijles",
+				"bijlesGroepBlue"
+			],
+			[
+				"itemD",
+				"itemDate"
+			],
+			[
+				"ima",
+				"itemImage"
+			],
+			[
+				"2px",
+				"2px"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 5693,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "mailer.php",
+			"settings":
+			{
+				"buffer_size": 3651,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "redirect.html",
+			"settings":
+			{
+				"buffer_size": 127,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "oauth2.php",
+			"settings":
+			{
+				"buffer_size": 1742,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 47.0,
+		"selected_items":
+		[
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/overeem/Documents/Code/werkbon.overeemtelecom.nl/oauth2.php",
+		"/Users/overeem/Documents/Code/werkbon.overeemtelecom.nl/index.html",
+		"/Users/overeem/Downloads/HisDataGeneriek1302.sql",
+		"/Users/overeem/Dropbox/DeReddingsark/contactbladen/een-ding.md",
+		"/Users/overeem/Dropbox/DeReddingsark/contactbladen/artikelen.csv",
+		"/Users/overeem/Dropbox/DeReddingsark/contactbladen/2_petr_2_slotvers.md",
+		"/Users/overeem/Dropbox/DeReddingsark/contactbladen/voor-alle-dingen-pasen-2013",
+		"/Users/overeem/Documents/Code/bijlesgroep.nl/v0.1/javascripts/app.min.js",
+		"/Users/overeem/Documents/Code/bijlesgroep.nl/v0.1/sass/_settings.scss",
+		"/Users/overeem/Documents/Code/bijlesgroep.nl/v0.1/sass/app.scss",
+		"/Users/overeem/Documents/Code/bijlesgroep.nl/v0.1/sass/bijlesgroep.scss",
+		"/Users/overeem/Documents/Code/bijlesgroep.nl/v0.1/bijlesgroep.nl/index.html",
+		"/Users/overeem/Documents/Code/bijlesgroep.nl/v0.1/bijlesgroep.nl/stylesheets/app.css",
+		"/Users/overeem/Documents/Code/bijlesgroep.nl/v0.1/bijlesgroep.nl/javascripts/foundation/app.js",
+		"/Users/overeem/Documents/Code/bijlesgroep.nl/v0.1/bijlesgroep.nl/build.sh",
+		"/Users/overeem/Documents/Code/bijlesgroep.nl/v0.0.5-vacature/_layouts/vacature.html",
+		"/Users/overeem/Documents/Code/bijlesgroep.nl/v0.1/bijlesgroep.nl/javascripts/foundation/jquery.js",
+		"/Users/overeem/Documents/Code/bijlesgroep.nl/v0.1/bijlesgroep.nl/_config.yml",
+		"/Users/overeem/Documents/Code/bijlesgroep.nl/v0.1/bijlesgroep.nl/config.rb",
+		"/Users/overeem/Documents/Code/bijlesgroep.nl/v0.1/bijlesgroep.nl/sass/app.scss",
+		"/Users/overeem/Documents/Code/bijlesgroep.nl/v0.1/bijlesgroep.nl/sass/_settings.scss",
+		"/Users/overeem/Documents/Code/bijlesgroep.nl/v0.0.5-vacature/index.markdown",
+		"/Users/overeem/Documents/Code/bijlesgroep.nl/v0.0.5-vacature/.htaccess",
+		"/Users/overeem/Documents/Code/bijlesgroep.nl/v0.0.5-vacature/javascripts/app.js",
+		"/Users/overeem/Documents/Code/bijlesgroep.nl/v0.0.5-vacature/mailer.php",
+		"/Users/overeem/Documents/Code/bijlesgroep.nl/v0.0.5-vacature/stylesheets/app.css",
+		"/Users/overeem/Dropbox/Public/bijlesgroep/mailer.php",
+		"/Users/overeem/Dropbox/Public/bijlesgroep/stylesheets/app.css",
+		"/Users/overeem/Dropbox/Public/bijlesgroep/javascripts/app.js",
+		"/Users/overeem/Dropbox/Public/bijlesgroep/mail.html",
+		"/Users/overeem/Dropbox/Public/bijlesgroep/_layouts/vacature.html",
+		"/Users/overeem/Dropbox/Public/bijlesgroep/bijlesnodig.markdown",
+		"/Users/overeem/Dropbox/Public/bijlesgroep/contact.markdown",
+		"/Users/overeem/Dropbox/Public/bijlesgroep/index.markdown",
+		"/Users/overeem/Dropbox/Public/bijlesgroep/bijlesgroep.sublime-project",
+		"/Users/overeem/Dropbox/Public/bijlesgroep/_layouts/page.html",
+		"/Users/overeem/Dropbox/Public/bijlesgroep/bijlesgeven.markdown",
+		"/Users/overeem/Dropbox/Public/bijlesgroep/_site/mailer.php",
+		"/Users/overeem/Dropbox/Public/bijlesgroep/_site/stylesheets/app.css",
+		"/Users/overeem/Dropbox/Public/bijlesgroep/debug.php",
+		"/Users/overeem/Dropbox/Public/bijlesbunschoten/contact.html",
+		"/Users/overeem/Dropbox/Public/bijlesbunschoten/hoewerkenwij.html",
+		"/Users/overeem/Dropbox/Public/bijlesbunschoten/overons.html",
+		"/Users/overeem/Dropbox/Public/bijlesbunschoten/stylesheets/app.css",
+		"/Users/overeem/Dropbox/Public/bijlesbunschoten/index.html",
+		"/Users/overeem/Documents/Code/MijnInSite/www/css/index.css",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/indexen/artikelen.csv",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/arenden.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/bedekt_of_vergeven.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/bijbelstudie_.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/bindingen.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/bitterheid.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/daar_zij_licht.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/daniel_in_de_leeuwenkuil__als_type_van_christus.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/daniel_in_de_leeuwenkuil__praktisch_toegepast.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/daniel_in_de_leeuwenkuil__profetisch_toegepast.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/de_bijbel.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/de_collecte.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/de_gemeente_1_van_god.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/de_gemeente_2_als_huis_van_god.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/de_gemeente_4_als_kudde.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/de_gemeente_5_als_de_bruid_van_het_lam.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/de_heilige_geest.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/de_opname_van_de_gemeente_1.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/de_opname_van_de_gemeente_2.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/de_opname_van_de_gemeente_3.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/de_staf_van_aaron.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/de_straf__macht_en_gevolgen_van_de_zonde.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/de-rots-als-type.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/de-vrouw-liet-haar-kruik-staan.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/deut_1_vers_31.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/die_mij_ruimte_maakt_in_benauwdheid_psalm_4_2.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/dienen_1.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/dienen_2.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/dirk-scheringa_en_de_eindtijd.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/een_korte_wandeling_van_het_altaar_naar_de_ark.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/een_nieuw_jaar__2005.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/een-ding.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/eenzaamheid.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/eli-op-de-stoel.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/en_doet_een_ring_aan_zijn_hand.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/en_terwijl_zij_van_de_berg_afdaalden.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/gebed_1_luisteren.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/gebed_2_te_allen_tijde.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/gebed_3_belijden.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/gebed_4_voorbede.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/gebed_5_aanbidding.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/geenszins__here.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/geleerd.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/gemeentegroei.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/genade-2.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/genade.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/genesis-hoofdstuk-1.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/genesis-hoofdstuk-3.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/genesis.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/getuigen.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/gij-wilt-waarheid-in-het-verborgene.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/gij-zijt-een-god-des-aanziens.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/gij-zult-bij-uw-uitrusting-een-schopje-hebben.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/gods_leiding_in_ons_dagelijks_leven.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/golgotha.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/heer-uw-vriend-is-ziek.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/heiliging.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/het_beste_kleed.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/genade-4.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/genade-3.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/gedragen-en-verdragen.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/en-deze-had-een-zuster.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/een_leven_vol_zorg_en_moeite.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/het_karakter_van_jezus_christus.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/het_loofhuttenfeest.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/het_pascha_en_de_doortocht_door_de_rode_zee_en_de_jordaan.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/hij-weet-alles-van-me.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/is-vergeven-onmogelijk.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/jezus_weende.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/jozef_een_paar_grote_lijnen.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/kerst_2003__ere_zij_god.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/kerst_2004__goud_wierook_en_mirre.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/kerst_2008.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/kerst_2009.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/kerst-2009.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/kerst-2010.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/kiest_dan_heden_wie_gij_dienen_zult.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/komt_.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/loofhuttenfeest.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/neemt-de-steen-weg.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/olie_om_de_wond_te_verzachten.md",
+		"/Users/overeem/Dropbox/DeReddingsark/DeReddingsark.nl/Data/paginas/artikelen/om_te_oordelen_de_levenden_en_de_doden.md"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"2013",
+			"injector",
+			"controller",
+			"ngResourceVote",
+			"</li>",
+			"<li>",
+			"footer",
+			"font-fam",
+			".png",
+			"bijlesdoc",
+			".intro",
+			"arrowdo",
+			"\\r\\n",
+			"');\n",
+			"888",
+			"06a",
+			"f2e",
+			"footer",
+			"ondertwee",
+			">\n",
+			"F2E6F7",
+			".loading",
+			"</p><p>",
+			"</p><p>'",
+			"</p><p>",
+			"</p><p>'",
+			"</p><p>",
+			"</p><p>'",
+			"'",
+			"</p>\n<p>",
+			"'",
+			"</p><p>",
+			"<br />",
+			"<br /><br />",
+			"</p><p>",
+			"<br />",
+			"<br /><br />",
+			"<br />",
+			"<br /><br />",
+			"<br />",
+			"<br /><br />",
+			"<br />",
+			"<br /><br />",
+			"</p><p>",
+			"</p>\n<p>",
+			"</p>",
+			"ui-btn",
+			"listview",
+			"data-rel='back'",
+			" ",
+			"geurts",
+			"vroon",
+			" "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"</blockquote>",
+			"<blockquote>",
+			"\\n",
+			" ",
+			"",
+			" ",
+			"\n\n",
+			" ",
+			"\n\n",
+			" ",
+			"\n\n",
+			" ",
+			"\n\n",
+			" ",
+			"\n\n",
+			", "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.php",
+					"settings":
+					{
+						"buffer_size": 5693,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1309,
+								1319
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 274.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "mailer.php",
+					"settings":
+					{
+						"buffer_size": 3651,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1375,
+								1375
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 671.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "redirect.html",
+					"settings":
+					{
+						"buffer_size": 127,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								127,
+								127
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "oauth2.php",
+					"settings":
+					{
+						"buffer_size": 1742,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1141,
+								1141
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 243.0,
+	"status_bar_visible": true
+}

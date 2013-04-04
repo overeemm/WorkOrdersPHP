@@ -40,7 +40,7 @@
 
       $message = Swift_Message::newInstance();
       $message = $message
-        ->setSubject('Werkbon')
+        ->setSubject('Werkbon voor ' . $_POST["Bedrijf"])
         ->setFrom($from)
         ->setTo(array($_POST["Email"] => $_POST["Contactpersoon"]))
         ->setCc($cc)
@@ -61,6 +61,12 @@
 '<tr><th style="text-align: left;">Telefoonnummer</th><td>' . $_POST["Telefoonnummer"] . '</td></tr>' .
 '<tr><th style="text-align: left;">Contactpersoon</th><td>' . $_POST["Contactpersoon"] . '</td></tr>' .
 '<tr><th style="text-align: left;">Email</th><td>' . $_POST["Email"] . '</td></tr>' .
+'</table>'.
+'<br /><hr /><br />'.
+'<h4>Werkbon</h4>'.
+'<table>'.
+'<tr><th style="text-align: left;">Referentie</th><td>' . $_POST["Referentie"] . '</td></tr>' .
+'<tr><th style="text-align: left;">Opmerkingen</th><td>' . $_POST["Opmerkingen"] . '</td></tr>' .
 '</table>'.
 '<br /><hr /><br />'.
 '<h4>Gewerkte tijden</h4>'.

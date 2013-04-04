@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php
+
+  if(!isset($_SESSION['access_token'])){
+    header('Location: /oauth2.php');
+  }
+
+?><!DOCTYPE html>
 
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
@@ -13,6 +19,12 @@
   <link rel="stylesheet" href="stylesheets/foundation.min.css">
   <link rel="stylesheet" href="stylesheets/app.css">
   <link rel="stylesheet" href="signaturepad/jquery.signaturepad.css">
+
+  <!--
+  <?php
+    echo $_SESSION['access_token'];
+  ?>
+  -->
 </head>
 <body>
 
@@ -30,6 +42,8 @@
           <input type="tel" name="Telefoonnummer" placeholder="Telefoonnummer" />
           <input type="text" name="Contactpersoon" placeholder="Contactpersoon" />
           <input type="email" name="Email" placeholder="E-mail adres" />
+          <input type="text" name="Referentie" placeholder="Referentie" />
+          <textarea name="Opmerkingen" placeholder="Overig"></textarea>
         </div>
 
         <div class="six columns step1 momenten">

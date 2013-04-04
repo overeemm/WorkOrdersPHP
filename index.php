@@ -1,6 +1,8 @@
 <?php
 
-  if(!isset($_SESSION['access_token'])){
+  session_start();
+
+  if(!isset($_SESSION['access_token']) && !isset($_SESSION['email'])){
     header('Location: /oauth2.php');
   }
 
@@ -14,7 +16,7 @@
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
 
-  <title>werkbonnen | overeemtelecom.nl</title>
+  <title>werkbonnen | overeemtelecom.nl | <?php echo $_SESSION['email'] ?> | <?php echo $_SESSION['name'] ?></title>
   
   <link rel="stylesheet" href="stylesheets/foundation.min.css">
   <link rel="stylesheet" href="stylesheets/app.css">
@@ -33,6 +35,8 @@
     <div class="twelve columns">
     
       <form method="post" action="mailer.php" class="werkbon">
+        <input type="hidden" name="from_email" value="<?php echo $_SESSION['email'] ?>" />
+        <input type="hidden" name="from_name" value="<?php echo $_SESSION['name'] ?>" />
 
         <div class="twelve columns step1">
           <input type="text" name="Bedrijf" placeholder="Bedrijf" />

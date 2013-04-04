@@ -41,7 +41,7 @@
       $message = Swift_Message::newInstance();
       $message = $message
         ->setSubject('Werkbon voor ' . $_POST["Bedrijf"])
-        ->setFrom($from)
+        ->setFrom(array($_POST["from_email"] => $_POST["from_name"]))
         ->setTo(array($_POST["Email"] => $_POST["Contactpersoon"]))
         ->setCc($cc)
         ->setBody(

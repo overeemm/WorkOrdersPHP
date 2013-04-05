@@ -101,10 +101,74 @@
   </div>
 
   <script src="javascripts/jquery-1.9.0.min.js"></script>
+  <script src="javascripts/bootstrap.min.js"></script>
   <script src="signaturepad/jquery.signaturepad.min.js"></script>
   <script>
+
+    function addProductTypeahead() {
+
+      //$("input.onderdelen[type='text']").typeahead('destroy');
+
+      $("input.onderdelen[type='text']").typeahead({
+        source: function (query, process) {
+          return $.getJSON('/wefact.php', { product: query }, function (data) {
+
+            var products = [];
+            $.each(data, function (i, p) {
+              products.push(p.name);
+            });
+
+            return process(products);
+          });
+        }
+      });
+    }
+
+    function getCompanyInfo(code) {
+      $.getJSON('/wefact.php', { bedrijfcode: code }, function (data) {
+        //$("input[name='Bedrijf']").val(data.name);
+        $("input[name='Adres']").val(data[0].adres);
+        $("input[name='Postcode']").val(data[0].postcode);
+        $("input[name='Plaats']").val(data[0].plaats);
+        $("input[name='Email']").val(data[0].email);
+        $("input[name='Telefoonnummer']").val(data[0].telefoon);
+        if(data[0].voorletters && data[0].achternaam) {
+          $("input[name='Contactpersoon']").val(data[0].voorletters + " " + data[0].achternaam);
+        } else {
+          $("input[name='Contactpersoon']").val("");
+        }
+      });
+    }
+
+    function addCompanyTypeahead() {
+
+      //$("input.onderdelen[type='text']").typeahead('destroy');
+      var bedrijvenMap = {};
+      $("input[name='Bedrijf']").typeahead({
+        source: function (query, process) {
+          return $.getJSON('/wefact.php', { bedrijf: query }, function (data) {
+
+            var bedrijven = [];
+            $.each(data, function (i, p) {
+              bedrijven.push(p.name);
+              bedrijvenMap[p.name] = p.id;
+            });
+
+            return process(bedrijven);
+          });
+        },
+        updater: function (item) {
+          getCompanyInfo(bedrijvenMap[item]);
+          return item;
+        }
+      });
+    }
+
     $(document).ready(function() {
       
+      addProductTypeahead();
+      addCompanyTypeahead();
+
       var now = new Date();
       var minutes = now.getMinutes();
       var hours = now.getHours();
@@ -137,17 +201,19 @@
       $("input.momenten[type='date']").first().val(currentDate);
       $("input.momenten.eind").first().val(currentTime);
 
-      $("div.onderdelen").on("keyup", "input.onderdelen", function (event) {
+      $("div.onderdelen").on("change", "input.onderdelen", function (event) {
         if($("input.onderdelen[type='number']").last().val() != ""
           || $("input.onderdelen[type='text']").last().val() != "")
         {
           $("<input class='onderdelen' type='number' name='Aantal[]' placeholder='Nr' />" +
             "<input class='onderdelen' type='text' name='Omschrijving[]' placeholder='Omschrijving' />" +
             "<div class='clear'> </div>").appendTo($("div.onderdelen"));
+
+          addProductTypeahead();
         }
       });
 
-      $("div.momenten").on("keyup", "input.momenten", function (event) {
+      $("div.momenten").on("change", "input.momenten", function (event) {
         if($("input.momenten[type='date']").last().val() != ""
           || $("input.momenten.start").last().val() != ""
           || $("input.momenten.eind").last().val() != "")

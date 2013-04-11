@@ -1,6 +1,8 @@
 <?php
 
-  if(!isset($_COOKIE['wb_auth']) || $_COOKIE['wb_auth'] == ""){
+  session_start();
+
+  if(!isset($_SESSION['access_token']) && !isset($_SESSION['email'])){
     header('Location: /oauth2.php');
   }
 
@@ -12,55 +14,29 @@
   <meta charset="utf-8" />
 
   <!-- Set the viewport width to device width for mobile -->
-  <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width" />
 
-  <title>Werkbonnen</title>
+  <title>werkbonnen | overeemtelecom.nl | <?php echo $_SESSION['email'] ?> | <?php echo $_SESSION['name'] ?></title>
   
   <link rel="stylesheet" href="stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="signaturepad/jquery.signaturepad.css">
   <link rel="stylesheet" href="stylesheets/app.css">
+  <link rel="stylesheet" href="signaturepad/jquery.signaturepad.css">
 
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <link rel="apple-touch-icon-precomposed" href="images/apple.png"/>
-  <link rel="apple-touch-startup-image" href="images/splash.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
-  
-  <script type="text/javascript" language="javascript">
-
-    function updateOrientation() {
-      
-      $('.sigWrapper').removeClass("orientleft").removeClass("orientright");
-      if (window.orientation == -90) {
-        $('.sigWrapper').addClass("orientright");
-      }
-      if (window.orientation == 90) {
-        $('.sigWrapper').addClass("orientleft");
-      }
-      if (window.orientation == 0) {
-      }
-    }
-  </script>
-
+  <!--
+  <?php
+    echo $_SESSION['access_token'];
+  ?>
+  -->
 </head>
-<body onorientationchange="updateOrientation();">
+<body>
 
-  <div class="fixed">
-    <nav class="top-bar">
-      <ul class="title-area">
-
-    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-        <li class="step1 active"><a href="#"><span>Wie</span></a></li>
-        <li class="step2"><a href="#"><span>Wat</span></a></li>
-        <li class="step3"><a href="#"><span>Verstuur</span></a></li>
-        
-      </ul>
-    </nav>
-  </div>
-
-  <form method="post" action="mailer.php" class="werkbon">
-    <input type="hidden" name="from_email" value="" />
-    <input type="hidden" name="from_name" value="" />
+  <div class="row">
   
-    <div class="row">
+    <div class="twelve columns">
+    
+      <form method="post" action="mailer.php" class="werkbon">
+        <input type="hidden" name="from_email" value="<?php echo $_SESSION['email'] ?>" />
+        <input type="hidden" name="from_name" value="<?php echo $_SESSION['name'] ?>" />
 
         <div class="twelve columns step1">
           <input type="text" name="Bedrijf" placeholder="Bedrijf" />
@@ -71,14 +47,10 @@
           <input type="text" name="Contactpersoon" placeholder="Contactpersoon" />
           <input type="email" name="Email" placeholder="E-mail adres" />
           <input type="text" name="Referentie" placeholder="Referentie" />
-          
-        </div>
-
-        <div class="twelve columns step2">
           <textarea name="Opmerkingen" placeholder="Overig"></textarea>
         </div>
 
-        <div class="twelve columns step2 momenten">
+        <div class="six columns step1 momenten">
           <input class="momenten" type="date" name="Datum[]" placeholder="Datum" />
           <input class="momenten start" type="time" name="Begintijd[]" placeholder="08:00" />
           <input class="momenten eind" type="time" class="end" name="Eindtijd[]" placeholder="17:00" />
@@ -92,7 +64,7 @@
           <div class="clear"> </div>
         </div>
 
-        <div class="twelve columns step2 onderdelen">
+        <div class="six columns step1 onderdelen">
           <input class="onderdelen" type="number" name="Aantal[]" placeholder="Nr" />
           <input class="onderdelen" type="text" name="Omschrijving[]" placeholder="Omschrijving" />
 
@@ -104,36 +76,34 @@
           <div class="clear"> </div>
         </div>
 
-        <div class="twelve columns step3">
+        <div class="clear"> </div>
 
-          <div class="sig" id="sig">
+        <button class="button secondary step1" id="akkoord">Akkoord</button>
 
-            <ul class="sigNav">
-              <li class="clearButton"><a href="#clear">Opnieuw</a></li>
-            </ul>
+        <div class="sig" id="sig">
 
-            <div class="sig sigWrapper">
-              <div class="typed"></div>
-              <canvas class="pad" width="290" height="330"></canvas>
-              <input type="hidden" name="output" class="output">
-            </div>
+          <ul class="sigNav">
+            <li class="clearButton"><a href="#clear">Opnieuw</a></li>
+          </ul>
 
-            <input class="button secondary" type="submit" id="verstuur" value="Versturen" />
+          <div class="sig sigWrapper">
+            <div class="typed"></div>
+            <canvas class="pad" width="730" height="400"></canvas>
+            <input type="hidden" name="output" class="output">
           </div>
+
+          <input class="button secondary" type="submit" id="verstuur" value="Versturen" />
         </div>
+
+      </form>
 
     </div>
-  </form>
-
+  </div>
 
   <script src="javascripts/jquery-1.9.0.min.js"></script>
   <script src="javascripts/bootstrap.min.js"></script>
   <script src="signaturepad/jquery.signaturepad.min.js"></script>
   <script>
-
-    var user = JSON.parse("<?php echo $_COOKIE['wb_auth']; ?>");
-    $("input[name='from_name']").val(user.name);
-    $("input[name='from_email']").val(user.email);
 
     function addProductTypeahead() {
 
@@ -196,23 +166,6 @@
 
     $(document).ready(function() {
       
-      $("nav li a").click(function (event) {
-        if(!$(this).parent().hasClass("active")){
-          $("div.twelve.columns").hide();
-          $("nav li").removeClass("active");
-          if($(this).parent().hasClass("step1")){
-            $("div.twelve.columns.step1").show();
-          } else if($(this).parent().hasClass("step2")){
-            $("div.twelve.columns.step2").show();
-          } else if($(this).parent().hasClass("step3")){
-            $("div.twelve.columns.step3").show();
-          }
-          $(this).parent().addClass("active");
-        }
-        event.preventDefault();
-      });
-
-
       addProductTypeahead();
       addCompanyTypeahead();
 
@@ -235,15 +188,15 @@
       var currentTime = hours + ":" + minutes;
 
       $('.werkbon').signaturePad({ defaultAction: "drawIt", drawOnly: true, lineWidth: 0 });
-      $('.sig').show();
+      $('.sig').hide();
 
-      //$("#akkoord").click(function (event) {
-      //  event.stopPropagation();
-      //  event.preventDefault();
+      $("#akkoord").click(function (event) {
+        event.stopPropagation();
+        event.preventDefault();
         
-        
-        //$('.sig').get(0).scrollIntoView();
-      //});
+        $('.sig').show();
+        $('.sig').get(0).scrollIntoView();
+      });
 
       $("input.momenten[type='date']").first().val(currentDate);
       $("input.momenten.eind").first().val(currentTime);

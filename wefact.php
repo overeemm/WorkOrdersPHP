@@ -2,10 +2,9 @@
 require_once 'config.php';
 require_once 'wefact/api.php';
 
-session_start();
 // https://www.wefact.nl/wefact-hosting/api/debiteuren/
 
-if(!isset($_SESSION['access_token']) && !isset($_SESSION['email'])){
+if(!isset($_COOKIE['wb_auth'])){
   echo "[]";
 } else if (isset($_GET["product"])){
 

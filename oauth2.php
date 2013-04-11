@@ -16,7 +16,8 @@ $client->setRedirectUri($GoogleRedirectUri);
 $client->setScopes(array('https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/userinfo.email'));
 
 if (isset($_REQUEST['logout'])) {
-  unset($_SESSION['access_token']);
+  setcookie("wb_auth", "", time() - 3600);
+  header('Location: /');
 }
 
 if (isset($_GET['code'])) {
@@ -39,10 +40,15 @@ if ($client->getAccessToken()) {
 
   if($email === "overeemm@gmail.com" || stripos($email, '@overeemtelecom.nl')) {
 
-    $_SESSION['email'] = $userinfoArray["email"];
-    $_SESSION['name'] = $userinfoArray["name"];
+    setcookie("wb_auth", 
+      '{"email":"'.$userinfoArray["email"].'",'.
+        '"name":"'.$userinfoArray["name"].'"}',
+      time()+60*60*24*365, "/", "overeemtelecom.nl", true, true);
+
+    //$_SESSION['email'] = $userinfoArray["email"];
+    //$_SESSION['name'] = $userinfoArray["name"];
     // The access token may have been updated lazily.
-    $_SESSION['access_token'] = $client->getAccessToken();
+    //$_SESSION['access_token'] = $client->getAccessToken();
   } else {
     header('Location: http://www.overeemtelecom.nl');
   }

@@ -1,31 +1,56 @@
 body { 
+  /*
   background: #f8f8f8 url("../images/logo.jpg") 10px 0px no-repeat;
   background-size: 50px auto;
   width: 768px;
+  */
 }
 
-.row { padding-top: 20px; position: relative; }
+.row { padding-top: 45px; position: relative; }
+.column, .columns { padding: 10px 10px; }
 div.clear { clear: both; }
+
+@media only screen and (max-width: 940px) {
+  .top-bar ul.left > li, .top-bar ul.right > li, .top-bar ul > li {
+    float: left;
+  }
+}
 
 form.werkbon { position: relative; }
 
 .werkbon .sigWrapper {
-  height: 405px;
+  height: 335px;
+  width: 295px;
 }
 
-.werkbon div:first-child input:first-child { margin-left: 50px; width: 658px; }
-.werkbon .postcode { width: 200px; float: left; margin-right: 20px;}
-.werkbon .plaats { width: 488px; float: left; margin-right: 0px;}
+/*
+.werkbon .sigWrapper.orientleft {
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin: 50% 50%;
+}
+
+.werkbon .sigWrapper.orientright {
+    -webkit-transform: rotate(90deg);
+    -webkit-transform-origin: 50% 50%;
+} 
+*/
+
+
+div.step2, div.step3 { display:none;}
+
+/*.werkbon div:first-child input:first-child { margin-left: 50px; width: 300px; }
+.werkbon .postcode { width: 100px; float: left; margin-right: 20px;}
+.werkbon .plaats { width: 200px; float: left; margin-right: 0px;}*/
 .werkbon input[type="date"] { width: 120px; float: left; margin-right: 20px;}
-.werkbon input[type="time"] { width: 75px; float: left; margin-right: 20px;}
+.werkbon input[type="time"] { width: 60px; float: left; margin-right: 20px;}
 .werkbon input[type="time"].end { margin-right: 0px;}
 
 .werkbon input[type="number"] { width: 50px; float: left; margin-right: 20px;}
-.werkbon .six input[type="text"] { width: 255px; float: left; margin-right: 0px;}
+.werkbon .onderdelen input[type="text"] { width: 230px; float: left; margin-right: 0px;}
 
 .modal { display: none; width: 100%; height: 100%; background-color: #ccc; position: absolute; top: 0px; left: 0px;}
 .sig { display: none; }
-
+.sigNav { height: 15px;}
 
 .dropup,
 .dropdown {

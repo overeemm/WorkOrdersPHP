@@ -94,7 +94,7 @@
 
         <div class="twelve columns step2 onderdelen">
           <input class="onderdelen" type="number" name="Aantal[]" placeholder="Nr" />
-          <input class="onderdelen" type="text" name="Omschrijving[]" placeholder="Omschrijving" />
+          <input class="onderdelen" type="text" name="Omschrijving[]" placeholder="Omschrijving" value="Voorrijtarief" />
 
           <div class="clear"> </div>
 
@@ -194,6 +194,31 @@
       });
     }
 
+    function addOnderdeel() {
+      if($("input.onderdelen[type='number']").last().val() != ""
+          || $("input.onderdelen[type='text']").last().val() != "")
+      {
+        $("<input class='onderdelen' type='number' name='Aantal[]' placeholder='Nr' />" +
+          "<input class='onderdelen' type='text' name='Omschrijving[]' placeholder='Omschrijving' />" +
+          "<div class='clear'> </div>").appendTo($("div.onderdelen"));
+
+        addProductTypeahead();
+      }
+    }
+
+    function addMoment() {
+
+      if($("input.momenten[type='date']").last().val() != ""
+          || $("input.momenten.start").last().val() != ""
+          || $("input.momenten.eind").last().val() != "")
+      {
+        $("<input class='momenten' type='date' name='Datum[]' placeholder='Datum' />" +
+          "<input class='momenten start' type='time' name='Begintijd[]' placeholder='08:00' />" +
+          "<input class='momenten eind' type='time' class='end' name='Eindtijd[]' placeholder='17:00' />" +
+          "<div class='clear'> </div>").appendTo($("div.momenten"));
+      }
+    }
+
     $(document).ready(function() {
       
       $("nav li a").click(function (event) {
@@ -249,29 +274,62 @@
       $("input.momenten.eind").first().val(currentTime);
 
       $("div.onderdelen").on("change", "input.onderdelen", function (event) {
-        if($("input.onderdelen[type='number']").last().val() != ""
-          || $("input.onderdelen[type='text']").last().val() != "")
-        {
-          $("<input class='onderdelen' type='number' name='Aantal[]' placeholder='Nr' />" +
-            "<input class='onderdelen' type='text' name='Omschrijving[]' placeholder='Omschrijving' />" +
-            "<div class='clear'> </div>").appendTo($("div.onderdelen"));
-
-          addProductTypeahead();
-        }
+        addOnderdeel();
       });
 
       $("div.momenten").on("change", "input.momenten", function (event) {
-        if($("input.momenten[type='date']").last().val() != ""
-          || $("input.momenten.start").last().val() != ""
-          || $("input.momenten.eind").last().val() != "")
-        {
-          $("<input class='momenten' type='date' name='Datum[]' placeholder='Datum' />" +
-            "<input class='momenten start' type='time' name='Begintijd[]' placeholder='08:00' />" +
-            "<input class='momenten eind' type='time' class='end' name='Eindtijd[]' placeholder='17:00' />" +
-            "<div class='clear'> </div>").appendTo($("div.momenten"));
-        }
+        addMoment();
       });
     });
+
+    function serializeForm($form) {
+      var data = {};
+      $form.find("input, textarea").each(function(i, e){
+        var $e = $(e);
+        var ename = $e.prop("name");
+        if(data[ename]){
+          if(!data[ename].push) {
+            var val = data[ename];
+            data[ename] = [val];
+          }
+          data[ename].push($e.val());
+        } else {
+          data[ename] = $e.val();
+        }
+      });
+      return data;
+    }
+
+    function deserializeForm($form, data) {
+      for(var key in data){
+        if(data[key].push){
+          for(var i = 0; i < data[key].length; i++){
+            var val = data[key][i];
+            var elem = $form.find("*[name='"+key+"']:eq("+i+")");
+            if(elem.length == 0) {
+              addMoment();
+              addOnderdeel();
+              elem = $form.find("*[name='"+key+"']:eq("+i+")");
+            }
+            elem.val(val);
+          }
+        } else {
+          $form.find("*[name='"+key+"']").val(data[key]);
+        }
+      }
+    }
+
+    function saveForm() {
+      var data = serializeForm($("form"));
+      window.localStorage.setItem("werkbon", JSON.stringify(data));
+    }
+
+    if(location.hash === "#goed"){
+      window.localStorage.removeItem("werkbon");
+    } else {
+      deserializeForm($("form"), JSON.parse(window.localStorage.getItem("werkbon"))); 
+    }
+    window.setInterval(saveForm, 500);
   </script> 
   
 </body>

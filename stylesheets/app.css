@@ -36,7 +36,9 @@ form.werkbon { position: relative; }
 */
 
 
-div.step2, div.step3 { display:none;}
+div.step2, div.step3, div.step4 { display:none;}
+
+textarea.high { height: 200px; }
 
 /*.werkbon div:first-child input:first-child { margin-left: 50px; width: 300px; }
 .werkbon .postcode { width: 100px; float: left; margin-right: 20px;}

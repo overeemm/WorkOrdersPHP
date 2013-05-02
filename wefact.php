@@ -4,6 +4,8 @@ require_once 'wefact/api.php';
 
 // https://www.wefact.nl/wefact-hosting/api/debiteuren/
 
+header('Content-type: application/json');
+
 if(!isset($_COOKIE['wb_auth'])){
   echo "[]";
 } else if (isset($_GET["product"])){
@@ -66,6 +68,7 @@ if(!isset($_COOKIE['wb_auth'])){
            "\"email\": \"" . $debtor->EmailAddress . "\", " .
            "\"telefoon\": \"" . $debtor->PhoneNumber . "\", " .
            "\"achternaam\": \"" . $debtor->SurName . "\", " .
+           "\"notities\": " . json_encode($debtor->Comment) . ", " .
            "\"voorletters\": \"" . $debtor->Initials . "\"" . " }";
   }
   echo "]";

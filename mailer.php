@@ -7,6 +7,7 @@
   require_once 'config.php';
   require_once 'swiftmailer/swift_required.php';
   require_once 'signature-to-image.php';
+  require_once 'wefact/api.php';
 
   try
   {
@@ -39,7 +40,7 @@
       $materialen .= '</table>';
 
       $to = $from;
-      if(isset($_POST["Email"])) {
+      if(isset($_POST["Email"]) && $_POST["Email"] != "") {
         $to = array($_POST["Email"] => $_POST["Contactpersoon"]);
       }
 
@@ -116,7 +117,16 @@
       $mailer = Swift_Mailer::newInstance($transport);
       $mailer->send($message);
       
+      if(isset($_POST["BedrijfsCode"]) && $_POST["BedrijfsCode"] != "") {
+        $api = new WeFactAPI();
+        $api->editDebtor($WeFactApiKey, (int)$_POST["BedrijfsCode"], array(
+          'Comment' => $_POST["Notities"]
+        ));
+      }
+
       unlink($signaturefilename);
+
+      setcookie("wb_succes", 'top', time()+60, "/", "overeemtelecom.nl", true, true);
 
       header('Location: /#goed');
     } else {

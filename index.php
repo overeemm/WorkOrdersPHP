@@ -4,6 +4,9 @@
     header('Location: /oauth2.php');
   }
 
+  $success = isset($_COOKIE['wb_succes']) && $_COOKIE['wb_succes'] == "top";
+  setcookie("wb_succes", '', time()+60, "/", "overeemtelecom.nl", true, true);
+
 ?><!DOCTYPE html>
 
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
@@ -50,7 +53,8 @@
     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
         <li class="step1 active"><a href="#"><span>Wie</span></a></li>
         <li class="step2"><a href="#"><span>Wat</span></a></li>
-        <li class="step3"><a href="#"><span>Verstuur</span></a></li>
+        <li class="step3"><a href="#"><span>Notities</span></a></li>
+        <li class="step4"><a href="#"><span>Verstuur</span></a></li>
         
       </ul>
     </nav>
@@ -105,6 +109,11 @@
         </div>
 
         <div class="twelve columns step3">
+          <textarea class="high" name="Notities" placeholder="Notities"></textarea>
+          <input type="hidden" name="BedrijfsCode"/>
+        </div>
+
+        <div class="twelve columns step4">
 
           <div class="sig" id="sig">
 
@@ -155,12 +164,16 @@
     }
 
     function getCompanyInfo(code) {
+      $("input[name='BedrijfsCode']").val("");
       $.getJSON('/wefact.php', { bedrijfcode: code }, function (data) {
+
         //$("input[name='Bedrijf']").val(data.name);
         $("input[name='Adres']").val(data[0].adres);
         $("input[name='Postcode']").val(data[0].postcode);
         $("input[name='Plaats']").val(data[0].plaats);
         $("input[name='Email']").val(data[0].email);
+        $("textarea[name='Notities']").val(data[0].notities);
+        $("input[name='BedrijfsCode']").val(code);
         $("input[name='Telefoonnummer']").val(data[0].telefoon);
         if(data[0].voorletters && data[0].achternaam) {
           $("input[name='Contactpersoon']").val(data[0].voorletters + " " + data[0].achternaam);
@@ -231,6 +244,8 @@
             $("div.twelve.columns.step2").show();
           } else if($(this).parent().hasClass("step3")){
             $("div.twelve.columns.step3").show();
+          } else if($(this).parent().hasClass("step4")){
+            $("div.twelve.columns.step4").show();
           }
           $(this).parent().addClass("active");
         }
@@ -323,6 +338,15 @@
       var data = serializeForm($("form"));
       window.localStorage.setItem("werkbon", JSON.stringify(data));
     }
+
+    <?php
+    if($success){
+      ?>
+      window.localStorage.removeItem("werkbon");
+      <?php
+    }
+    ?>
+
 
     if(location.hash === "#goed"){
       window.localStorage.removeItem("werkbon");
